@@ -1,0 +1,33 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<p type = "hidden" id="errorMessage" style="color: red;"></p>
+<form asp-action="Registrarse" method="post" id = "registrarForm">
+    <div class="form-group">
+        <label for="NombreUsuario">Nombre de usuario:</label>
+        <input type="text" class="form-control" id="NombreUsuario" name="NombreUsuario" required>
+    </div>
+    <div class="form-group">
+        <label for="Contraseña">Contraseña:</label>
+        <input type="password" class="form-control" id="Contraseña" name="Contraseña" required>
+    </div>
+        <div class="form-group">
+        <label for="Nombre">Nombre:</label>
+        <input type="text" class="form-control" id="Nombre" name="Nombre" required>
+    </div>
+        <div class="form-group">
+        <label for="Apellido">Apellido:</label>
+        <input type="text" class="form-control" id="Apellido" name="Apellido" required>
+    </div>
+        <div class="form-group">
+        <label for="TipoUsuario">Tipo de usuario:</label>
+        <input type="text" class="form-control" id="TipoUsuario" name="TipoUsuario" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Registrarse</button>
+    <a href="/Home/Index">Iniciar Sesión</a>
+</form>
