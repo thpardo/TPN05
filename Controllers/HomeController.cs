@@ -78,10 +78,12 @@ public class HomeController : Controller
             return View("Index");
         }
         bd.RegistrarUsuario(usuario);
-        return RedirectToAction("Index");
+        return RedirectToAction("Bienvenida");
     }
+
     [HttpPost]
     [ValidateAntiForgeryToken]
+    
     public IActionResult Logout()
     {
         HttpContext.Session.Clear();
