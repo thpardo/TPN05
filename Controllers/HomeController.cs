@@ -75,10 +75,10 @@ public class HomeController : Controller
         if (existingUserCount > 0)
         {
             ViewBag.ErrorMessage = "El nombre de usuario ya está en uso. Por favor, elige otro.";
-            return View("Index");
+            return View("Registrar");
         }
         bd.RegistrarUsuario(usuario);
-        return RedirectToAction("Bienvenida");
+        return View("Bienvenida");
     }
 
     [HttpPost]
